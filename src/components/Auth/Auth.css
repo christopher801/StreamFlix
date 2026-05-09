@@ -1,0 +1,458 @@
+/* components/Auth/Auth.css */
+.auth-modal .modal-content {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.auth-modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  position: relative;
+}
+
+.auth-modal-header .modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #ffffff, #e50914);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.auth-close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #b3b3b3;
+  font-size: 1.2rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.auth-close-btn:hover {
+  background: rgba(229, 9, 20, 0.2);
+  color: #e50914;
+  transform: rotate(90deg);
+}
+
+.auth-modal-body {
+  padding: 1.5rem;
+}
+
+/* Google Button */
+.auth-google-btn {
+  width: 100%;
+  background: white;
+  color: #333;
+  border: none;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.auth-google-btn:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.auth-google-btn svg {
+  font-size: 1.2rem;
+}
+
+/* Divider */
+.auth-divider {
+  text-align: center;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.auth-divider::before {
+  left: 0;
+}
+
+.auth-divider::after {
+  right: 0;
+}
+
+.auth-divider span {
+  background: #1a1a1a;
+  padding: 0 10px;
+  color: #b3b3b3;
+  font-size: 0.85rem;
+}
+
+/* Form Labels */
+.auth-modal-body .form-label {
+  color: #b3b3b3;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Input Wrapper */
+.auth-input-wrapper {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.auth-input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e50914;
+  z-index: 1;
+  font-size: 1rem;
+}
+
+/* Form Controls - KORIGE POU TEXT LA WÈ */
+.auth-input-wrapper .form-control,
+.auth-input-wrapper input {
+  background: rgba(20, 20, 20, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  padding: 12px 12px 12px 40px !important;
+  border-radius: 8px !important;
+  font-size: 0.95rem !important;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Placeholder koulè */
+.auth-input-wrapper .form-control::placeholder,
+.auth-input-wrapper input::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+  font-size: 0.9rem;
+}
+
+/* Focus state */
+.auth-input-wrapper .form-control:focus,
+.auth-input-wrapper input:focus {
+  background: rgba(30, 30, 30, 0.95) !important;
+  border-color: #e50914 !important;
+  box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.2) !important;
+  color: #ffffff !important;
+  outline: none;
+}
+
+/* Hover state */
+.auth-input-wrapper .form-control:hover,
+.auth-input-wrapper input:hover {
+  border-color: rgba(229, 9, 20, 0.5) !important;
+  background: rgba(25, 25, 25, 0.95) !important;
+}
+
+/* Autofill styles */
+.auth-input-wrapper .form-control:-webkit-autofill,
+.auth-input-wrapper input:-webkit-autofill,
+.auth-input-wrapper .form-control:-webkit-autofill:hover,
+.auth-input-wrapper input:-webkit-autofill:hover,
+.auth-input-wrapper .form-control:-webkit-autofill:focus,
+.auth-input-wrapper input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(30, 30, 30, 0.95) inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: #ffffff;
+}
+
+/* Submit Button */
+.auth-submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #e50914, #ff0a1a);
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-top: 1rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.auth-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);
+  background: linear-gradient(135deg, #ff0a1a, #e50914);
+}
+
+.auth-submit-btn:disabled {
+  opacity: 0.6;
+  transform: none;
+}
+
+/* Footer Links */
+.auth-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.auth-switch-btn {
+  background: transparent;
+  border: none;
+  color: #e50914;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.auth-switch-btn:hover {
+  text-decoration: underline;
+  color: #ff0a1a;
+}
+
+/* Alert Styles */
+.auth-modal-body .alert {
+  border-radius: 8px;
+  font-size: 0.85rem;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.auth-modal-body .alert-danger {
+  background: rgba(229, 9, 20, 0.1);
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  color: #ff6b6b;
+}
+
+/* User Menu Styles */
+.auth-login-btn {
+  background: linear-gradient(135deg, #e50914, #ff0a1a);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.auth-login-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+  background: linear-gradient(135deg, #ff0a1a, #e50914);
+}
+
+.user-menu-toggle {
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e50914;
+  transition: all 0.3s ease;
+}
+
+.user-avatar:hover {
+  transform: scale(1.1);
+  border-color: #ff0a1a;
+}
+
+.user-avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e50914, #ff0a1a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Dropdown Menu */
+.user-menu-dropdown {
+  background: #1a1a1a;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  border-radius: 12px;
+  padding: 0.5rem;
+  min-width: 260px;
+  margin-top: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.user-menu-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 0.5rem;
+}
+
+.dropdown-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e50914;
+}
+
+.dropdown-avatar-placeholder {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e50914, #ff0a1a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.user-menu-info h6 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.user-menu-info small {
+  font-size: 0.7rem;
+  color: #b3b3b3;
+  word-break: break-all;
+}
+
+.user-menu-dropdown .dropdown-item {
+  color: #b3b3b3;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.user-menu-dropdown .dropdown-item:hover {
+  background: rgba(229, 9, 20, 0.1);
+  color: #e50914;
+}
+
+.user-menu-dropdown .dropdown-item svg {
+  font-size: 1rem;
+}
+
+.user-menu-dropdown .dropdown-divider {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0.5rem 0;
+}
+
+.user-menu-dropdown .text-danger {
+  color: #e50914 !important;
+}
+
+.user-menu-dropdown .text-danger:hover {
+  background: rgba(229, 9, 20, 0.15);
+  color: #ff0a1a !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .auth-modal .modal-dialog {
+    margin: 1rem;
+  }
+  
+  .auth-modal-body {
+    padding: 1rem;
+  }
+  
+  .auth-input-wrapper .form-control,
+  .auth-input-wrapper input {
+    padding: 10px 10px 10px 38px !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .auth-google-btn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .auth-submit-btn {
+    padding: 10px;
+  }
+  
+  .user-menu-dropdown {
+    min-width: 240px;
+  }
+}
+
+/* Animation */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.auth-modal .modal-content {
+  animation: modalFadeIn 0.2s ease;
+}
+
+/* Loading State */
+.auth-submit-btn .spinner-border {
+  width: 1rem;
+  height: 1rem;
+  border-width: 0.15rem;
+}
+
+/* Input Error State */
+.auth-input-wrapper .form-control.is-invalid,
+.auth-input-wrapper input.is-invalid {
+  border-color: #e50914 !important;
+}
+
+/* Password Toggle Button (si w ajoute li) */
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #b3b3b3;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
+}
+
+.password-toggle-btn:hover {
+  color: #e50914;
+}

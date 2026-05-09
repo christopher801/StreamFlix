@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="/icons/icon-72x72.png"/>
+      <square150x150logo src="/icons/icon-144x144.png"/>
+      <wide310x150logo src="/icons/icon-256x256.png"/>
+      <square310x310logo src="/icons/icon-512x512.png"/>
+      <TileColor>#0f0f0f</TileColor>
+      <TileImage src="/icons/icon-144x144.png"/>
+    </tile>
+    <notification>
+      <polling-uri>https://my-streamflix.vercel.app/notification.xml</polling-uri>
+      <polling-interval>3600</polling-interval>
+    </notification>
+  </msapplication>
+</browserconfig>

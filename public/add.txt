@@ -1,0 +1,4 @@
+# ads.txt for StreamFlix
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-0000000000000001, RESELLER, f08c47fec0942fa0
+# Contact: ads@my-streamflix.vercel.app for approval

@@ -1,0 +1,54 @@
+/* styles/responsive.css (Ajoute) */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 0;
+  transition: all 0.3s ease;
+  margin-top: 70px;
+  min-height: calc(100vh - 70px);
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .main-content {
+    margin-left: 280px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-content {
+    margin-left: 280px;
+    padding: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+    padding-bottom: 30px;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 576px) {
+  .main-content {
+    padding: 10px;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+}

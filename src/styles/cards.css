@@ -1,0 +1,245 @@
+/* styles/cards.css */
+.channel-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.channel-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(229, 9, 20, 0.3);
+}
+
+.card-logo-container {
+  position: relative;
+  padding-top: 56.25%;
+  background: #0a0a0a;
+  overflow: hidden;
+}
+
+.channel-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.channel-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  font-size: 3rem;
+  color: white;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.channel-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.channel-category {
+  font-size: 0.85rem;
+  color: #b3b3b3;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.1);
+}
+
+.favorite-icon {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.favorite-icon.active {
+  color: #e50914;
+}
+
+/* Add to styles/cards.css */
+
+.channel-row {
+  position: relative;
+}
+
+.row-scroll-container {
+  position: relative;
+}
+
+.row-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #e50914 #1a1a1a;
+  padding-bottom: 10px;
+}
+
+.row-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.row-scroll::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 3px;
+}
+
+.row-scroll::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 3px;
+}
+
+.channel-row-card {
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.channel-row-card-inner {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.channel-row-card:hover .channel-row-card-inner {
+  box-shadow: 0 10px 30px rgba(229, 9, 20, 0.3);
+}
+
+.row-favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.row-favorite-btn:hover {
+  transform: scale(1.1);
+  background: rgba(229, 9, 20, 0.8);
+}
+
+.row-card-image {
+  position: relative;
+  padding-top: 100%;
+  background: #0a0a0a;
+  overflow: hidden;
+}
+
+.row-card-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.row-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.channel-row-card:hover .row-card-overlay {
+  opacity: 1;
+}
+
+.row-card-body {
+  padding: 12px;
+}
+
+.row-channel-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.row-channel-category {
+  font-size: 0.75rem;
+  color: #b3b3b3;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .channel-row-card {
+    min-width: 150px !important;
+    max-width: 150px !important;
+  }
+  
+  .row-channel-name {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .channel-row-card {
+    min-width: 120px !important;
+    max-width: 120px !important;
+  }
+}

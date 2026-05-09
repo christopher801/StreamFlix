@@ -1,0 +1,10 @@
+# Security contact information
+Contact: mailto:security@my-streamflix.vercel.app
+Contact: https://my-streamflix.vercel.app/security
+Encryption: https://my-streamflix.vercel.app/pgp-key.asc
+Acknowledgments: https://my-streamflix.vercel.app/thanks
+Preferred-Languages: en, fr, es
+Canonical: https://my-streamflix.vercel.app/.well-known/security.txt
+Policy: https://my-streamflix.vercel.app/security-policy
+Hiring: https://my-streamflix.vercel.app/careers
+Expires: 2026-12-31T23:59:59.000Z

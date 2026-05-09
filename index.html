@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/mask-icon.svg" color="#e50914" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#0f0f0f" />
+    <meta name="background-color" content="#0f0f0f" />
+    
+    <!-- Meta Tags for SEO & Social -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="description" content="StreamFlix - Modern IPTV streaming platform with Netflix-style interface. Watch live TV, movies, and your favorite channels." />
+    <meta name="keywords" content="IPTV, streaming, live TV, movies, entertainment, StreamFlix" />
+    <meta name="author" content="StreamFlix" />
+    <meta name="application-name" content="StreamFlix" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="StreamFlix" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://streamflix.com/" />
+    <meta property="og:title" content="StreamFlix - IPTV Streaming Platform" />
+    <meta property="og:description" content="Modern IPTV streaming platform with Netflix-style interface" />
+    <meta property="og:image" content="/og-image.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://streamflix.com/" />
+    <meta property="twitter:title" content="StreamFlix - IPTV Streaming Platform" />
+    <meta property="twitter:description" content="Modern IPTV streaming platform with Netflix-style interface" />
+    <meta property="twitter:image" content="/og-image.png" />
+    
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#0f0f0f" />
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png" />
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://iptv-org.github.io" />
+    
+    <!-- Title -->
+    <title>StreamFlix - Modern IPTV Streaming Platform</title>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('SW registered: ', registration);
+            })
+            .catch(registrationError => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+    
+    <!-- Install Prompt -->
+    <script>
+      let deferredPrompt;
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        // Show install button to user
+        window.dispatchEvent(new CustomEvent('pwa-install-ready', { detail: { deferredPrompt: e } }));
+      });
+      
+      window.addEventListener('appinstalled', () => {
+        console.log('PWA installed successfully');
+        // Send analytics or show thank you message
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
