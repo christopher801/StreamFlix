@@ -1,6 +1,6 @@
 # StreamFlix - Modern IPTV Streaming Platform
 
-![StreamFlix Banner](https://streamflix.com/og-image.png)
+![StreamFlix Banner](https://my-streamflix.vercel.app/og-image.png)
 
 ## 📺 Overview
 
