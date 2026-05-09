@@ -2,6 +2,7 @@
 
 # Dependencies
 node_modules/
+package-lock.json
 .pnp/
 .pnp.js
 
@@ -56,18 +57,6 @@ desktop.ini
 .firebase/
 firebase-debug.log
 
-# PWA
-public/sw.js
-public/workbox-*.js
-
-# Icons generated
-public/icons/
-public/favicon-*.png
-public/apple-touch-icon.png
-public/mask-icon.png
-public/mask-icon.svg
-public/screenshots/
-public/og-image.png
 
 # Temp files
 tmp/
